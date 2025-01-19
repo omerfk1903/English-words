@@ -1,26 +1,40 @@
-# English-words
+# English-Words
 
-Not: Uygulama henüz tamamlanmamıştır ve farklı özellikler eklenmeye devam edilecektir. Örneğin, veritabanındaki herhangi bir değişiklik olduğunda, kelimelerin karşılıkları sesli olarak kullanıcıya bildirilecektir.
+**Not:** Uygulama henüz tamamlanmamıştır ve farklı özellikler eklenmeye devam edilecektir. Örneğin, veritabanındaki herhangi bir değişiklik olduğunda, kelimelerin karşılıkları sesli olarak kullanıcıya bildirilecektir.
 
-# English-words Uygulamasının Form Sayfası
+---
 
-Uygulama, tek bir form sayfasından oluşmaktadır. Bu sayfada, veritabanına kelime ekleme, silme ve veritabanındaki kelimelerin Türkçe ya da İngilizce karşılıklarını görüntüleme gibi komutlar bulunmaktadır.
+## Uygulamanın Form Sayfası
 
-<img src="English words.png" alt="Proje Görseli" width="400" height="350"/> 
+Uygulama, tek bir form sayfasından oluşmaktadır. Bu sayfada, aşağıdaki özellikler bulunmaktadır:
+- Veritabanına kelime ekleme
+- Kelime silme
+- Veritabanındaki kelimelerin Türkçe ya da İngilizce karşılıklarını görüntüleme
 
-* ADD : Yeni kelimeler eklemek için kullanılır.
+### Proje Görseli:
+<img src="English words.png" alt="Proje Görseli" width="400" height="350"/>
 
-* Remove : kelime kadırma için kullanılır.
+---
 
-* Delet : liları boşaltmak için kullanılır.
+### Formdaki Özellikler ve Butonlar:
 
-* Show : Seçtiği harfte kelimeker gösterilir.
+- **ADD**: Yeni kelimeler eklemek için kullanılır.
+- **Remove**: Kelime kaldırmak için kullanılır.
+- **Delet**: Tüm lisboxları boşaltır.
+- **Show**: Seçilen harf ile başlayan kelimeleri görüntüler.
+- **Search**: Aranan kelimenin karşılığını gösterir.
+- **Access**: Veritabanına bağlantı oluşturmak için kullanılır.
 
-* Search : İstediğin kelime'nin karşılığını gösterir.
+---
 
-* Access : Veritabanın oluşturulmuştur.
+## Veritabanı İşlemleri
 
-Veritabanına kelime eklemek veya silmek için, kullanıcılar ilgili metin alanlarına değişiklik yaparak işlemi başlatan butona tıklamalıdır. Ardından, gerçekleştirilen işlemle ilgili özet bilgiler ListBox üzerinde görüntülenmektedir.
+Veritabanına kelime eklemek veya silmek için:
+1. Kullanıcılar ilgili metin alanına gerekli bilgileri girer.
+2. İşlemi başlatan butona tıklanır.
+3. Gerçekleştirilen işlemle ilgili özet bilgiler **ListBox** üzerinde görüntülenir.
 
+Veritabanına bağlantı sağlamak için aşağıdaki kod kullanılabilir:
 
-
+```csharp
+OleDbConnection Connection = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:Data.accdb");
